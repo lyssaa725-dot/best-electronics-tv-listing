@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung 77" OLED TV - Best Electronics</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #0284c7;
+            --success-color: #059669;
+            --danger-color: #dc2626;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: var(--card-bg);
+            padding: 15px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navbar h2 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--text-muted);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .product-image {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            min-height: 500px;
+            font-size: 4rem;
+        }
+
+        .product-details {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            margin-bottom: 20px;
+        }
+
+        .product-header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .price-section {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 2px solid var(--accent-color);
+        }
+
+        .price-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--success-color);
+        }
+
+        .condition-badge {
+            display: inline-block;
+            background-color: var(--success-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .specs {
+            margin-bottom: 30px;
+        }
+
+        .specs h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: var(--text-muted);
+        }
+
+        .spec-value {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .description {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .features {
+            margin-bottom: 30px;
+        }
+
+        .features h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .contact-section {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section h3 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            margin-bottom: 12px;
+        }
+
+        .contact-info label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .btn {
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .product-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+
+            .product-image {
+                min-height: 300px;
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>🏪 Best Electronics</h2>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 Theme</button>
+    </div>
+
+    <div class="container">
+        <!-- Product Image -->
+        <div class="product-image">
+            📺
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <div class="product-header">
+                <h1>Samsung 77" Class S90F Series</h1>
+                <p>OLED 4K UHD SamsungVision</p>
+            </div>
+
+            <!-- Price Section -->
+            <div class="price-section">
+                <div class="price-label">Asking Price</div>
+                <div class="price">$797.99</div>
+                <div class="condition-badge">Brand New</div>
+            </div>
+
+            <!-- Specifications -->
+            <div class="specs">
+                <h3>Specifications</h3>
+                <div class="spec-item">
+                    <span class="spec-label">Screen Size</span>
+                    <span class="spec-value">77 inches</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Type</span>
+                    <span class="spec-value">OLED</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Resolution</span>
+                    <span class="spec-value">4K UHD (3840 x 2160)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Series</span>
+                    <span class="spec-value">S90F</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Condition</span>
+                    <span class="spec-value">Brand New</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Location</span>
+                    <span class="spec-value">Los Angeles, CA</span>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <h3>Key Features</h3>
+                <ul class="feature-list">
+                    <li>OLED Technology - Superior contrast and colors</li>
+                    <li>4K Resolution - Crystal clear picture quality</li>
+                    <li>SamsungVision Technology - Enhanced viewing experience</li>
+                    <li>Smart TV capabilities</li>
+                    <li>HDR Support</li>
+                    <li>Large 77" display for immersive entertainment</li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3>📍 Location & Contact</h3>
+                <div class="contact-info">
+                    <label>Seller</label>
+                    <p>Best Electronics</p>
+                </div>
+                <div class="contact-info">
+                    <label>City</label>
+                    <p>Los Angeles, CA</p>
+                </div>
+                <div class="contact-info">
+                    <label>For inquiries, please reach out</label>
+                </div>
+            </div>
+
+            <!-- Contact Buttons -->
+            <div class="contact-buttons">
+                <button class="btn btn-primary" onclick="alert('Contact form would open here. Add your email to enable.')">💌 Inquire About This Item</button>
+                <button class="btn btn-secondary" onclick="copyToClipboard()">📋 Copy Details</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Best Electronics - Professional Electronics Retailer</p>
+        <p>All items are carefully inspected before listing</p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        function copyToClipboard() {
+            const text = `Samsung 77" Class S90F Series OLED 4K UHD\nPrice: $797.99\nCondition: Brand New\nLocation: Los Angeles, CA\nSeller: Best Electronics`;
+            navigator.clipboard.writeText(text);
+            alert('Product details copied to clipboard!');
+        }
+
+        // Load theme preference on page load
+        window.addEventListener('load', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.setAttribute('data-theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
